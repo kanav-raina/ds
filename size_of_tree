@@ -1,0 +1,13 @@
+def size_of_tree(root,val=33):
+    q=list()
+    q.append(root)
+    count=0
+    while(len(q)!=0):
+        count+=1
+        if(q[0].left != None):
+            q.append(q[0].left)
+        if(q[0].right !=None):
+            q.append(q[0].right)
+        q.remove(q[0])
+    
+    return(count)
