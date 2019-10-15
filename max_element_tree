@@ -1,0 +1,13 @@
+def max_element(root):
+    q=list()
+    q.append(root)
+    maxi=root.info
+    while(len(q)!=0):
+        if(maxi < q[0].info):
+            maxi=q[0].info
+        if(q[0].left != None):
+            q.append(q[0].left)
+        if(q[0].right !=None):
+            q.append(q[0].right)
+        q.remove(q[0])
+    return(maxi)
